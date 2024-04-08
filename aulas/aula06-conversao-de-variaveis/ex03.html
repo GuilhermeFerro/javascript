@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primeiro programa</title>
+  <style>
+    body {
+      background-color: aqua;
+      color: crimson;
+      font: normal 25pt Arial;
+    }
+  </style>
+</head>
+<body>
+  <h1>Olá, mundo!</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis est corrupti officiis reprehenderit perspiciatis odit autem suscipit praesentium tempore cupiditate temporibus recusandae voluptatem aspernatur, nostrum, sapiente incidunt soluta, quidem rem!</p>
+  <script>
+    /* 
+    Number.parseInt() converte para um numero inteiro
+    Number.parseFloat() converte para um numero com casa decimal
+    String() converte para uma string
+    n.toString() converte para uma string
+    usar ${} ao inves de escrever o nome da variavel com o sinal de concatenação + (usar crases para digitar `  `)
+
+    Moedas
+    .toFixed(2) fixa o valor com 2 casas decimais
+    .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+    */
+
+    var n1 = Number.parseInt(window.prompt('Digite um numero:'))
+    var n2 = Number.parseInt(window.prompt('Digite outro numero:'))
+    var s = n1 + n2
+    window.alert(`A soma entre ${n1} e ${n2} é ${s}`)
+    //(number + number) o sinal de + vira soma
+    //(string + string) o sinal de + vira concatenação
+  </script>
+</body>
+</html>
