@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Descobrindo de onde voce e</h1>
+    Digite aqui seu pais de origem: <input type="text" name="x1" id="x1">
+    <input type="button" value="Enviar" onclick="button()">
+    <div id="res">
+
+    </div>
+    <script>
+        function button() {
+            var pais = window.document.getElementById('x1')
+            var pais2 = String(pais.value)
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<p>Seu pais e ${pais2}</p>`
+            if (pais2 == 'Brasil') {
+                res.innerHTML += `<p>Voce e brasileiro</p>`
+            } else {
+                res.innerHTML += `<p>Voce e estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
