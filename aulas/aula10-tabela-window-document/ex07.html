@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+    <style>
+        body {
+            font: normal 18px Arial;
+        }
+        input {
+            font: normal 15px Arial;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.363) ;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="num1" id="num1"> +
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar() {
+        var num1 = window.document.getElementById('num1') //coloca o valor digitado dentro de uma variavel
+        var num2 = window.document.getElementById('num2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(num1.value) //transforma o conteudo dessa variavel em um numero, pois quando vem de uma caixa de texto, eh uma String
+        var n2 = Number(num2.value)
+        var s = n1 + n2
+        res.innerHTML = `O resultado da soma entre ${n1} e ${n2} eh ${s}`
+        }
+
+
+        // ARVORE DOM
+
+        //         location
+        // window -document - - 
+        //         history
+    </script>
+</body>
+</html>
