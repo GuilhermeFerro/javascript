@@ -8,14 +8,10 @@ function contar() {
   var saida = window.document.getElementById('saida')
   var res = inicioValorTratado
 
-  if (inicioValorTratado == '') {
-    return window.alert('Preencha um numero de inicio!')
+  if (inicioValorTratado == '' || fimValorTratado == ''|| passoValorTratado == '') {
+    return window.alert('[erro]Preencha os dados corretamente')
   }
 
-  if (passoValorTratado == 0) {
-    passoValorTratado = 1
-    return window.alert('Não é possível usar passo 0, mudando automaticamente para 1')
-  }
   
   // while (res <= fimValorTratado) {
   //   saida.innerHTML += `👉 ${res}`
@@ -25,11 +21,16 @@ function contar() {
   //     saida.innerHTML += `💪`
   //   }
   // }
-  
-  for (inicioValorTratado ; res <= fimValorTratado; res += passoValorTratado) {
-    saida.innerHTML += `${res}👉 `
-  }
-  
-
+  saida.innerHTML = 'Contando... <br>'
+  if (inicioValorTratado < fimValorTratado) {
+    for (inicioValorTratado ; res <= fimValorTratado; res += passoValorTratado) {
+      saida.innerHTML += ` ${res} 👉 `
+    }
+   } else {
+      for (inicioValorTratado ; res >= fimValorTratado ; res -= passoValorTratado) {
+        saida.innerHTML += ` ${res} 👉 `
+      }
+    }
+    saida.innerHTML += `\u{1F3C1}`
   // saida.innerHTML = `O valor de inicio é ${inicio.value}, valor de fim é ${fim.value} e o valor de passo é ${passo.value} e res é ${res}`
 }
