@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+body {
+  font: normal 18pt Arial;
+  background-color: rgb(49, 49, 186);
+}
+header {
+  color: white;
+}
+
+header > h1 {
+  text-align: center;
+}
+
+section {
+  background-color: white;
+  width: 520px;
+  border-radius: 8px;
+  margin: auto;
+  padding: 15px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.492);
+}
+/* 
+select#flist {
+  width: 150px;
+} */
+
+footer {
+  color: white;
+  text-align: center;
+  font-style: italic;
+}

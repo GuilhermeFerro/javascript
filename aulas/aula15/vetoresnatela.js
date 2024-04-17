@@ -9,7 +9,7 @@ valores.sort()
 for(let pos in valores) {
   console.log(`O valor da posição ${pos} é ${valores[pos]}`)
 }
-let pos = valores.indexOf(12)
+let pos = valores.indexOf()
 if (pos == -1) {
   console.log('O valor não foi encontrado')
 } else {
